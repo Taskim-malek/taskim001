@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Costume Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0f8;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #d8c9df;
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b49;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #293640;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            border: 2px solid #b9a0bd;
+            border-radius: 14px;
+            background-color: #eee0f1;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #89649b;
+        }
+
+        .field {
+            margin-bottom: 35px;
+        }
+
+        .name {
+            display: flex;
+            gap: 18px;
+        }
+
+        .name input {
+            width: 50%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #89649b;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6d4b7e;
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .name {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Costume Order Form</h1>
+
+    <form>
+
+        <div class="field">
+            <label>Dancer's Name</label>
+            <div class="name">
+                <input type="text" placeholder="First" required>
+                <input type="text" placeholder="Last" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Age</label>
+            <input type="number" min="1" max="120" required>
+        </div>
+
+        <div class="field">
+            <label>Parent/Guardian's Name</label>
+            <div class="name">
+                <input type="text" placeholder="First" required>
+                <input type="text" placeholder="Last" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Email</label>
+            <input type="email" required>
+        </div>
+
+        <div class="field">
+            <label>Phone</label>
+            <input type="tel" placeholder="##########" required>
+        </div>
+
+        <div class="field">
+            <label>Costume Type</label>
+            <select required>
+                <option value="">Select Costume</option>
+                <option>Bharatanatyam</option>
+                <option>Garba</option>
+                <option>Western Dance</option>
+                <option>Classical Dance</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Costume Size</label>
+            <select required>
+                <option value="">Select Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+                <option>Extra Large</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Quantity</label>
+            <input type="number" min="1" value="1" required>
+        </div>
+
+        <div class="field">
+            <label>Additional Information</label>
+            <textarea rows="4" placeholder="Enter your message"></textarea>
+        </div>
+
+        <button type="submit">Submit Order</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
